@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import "./index.css";
-import Navbar from "./components/Navbar/navbar";
+import NavBar from "./components/Navbar/navbar";
 
 function App() {
-  return <Navbar />;
+  return <NavBar />;
 }
 
 export default App;
