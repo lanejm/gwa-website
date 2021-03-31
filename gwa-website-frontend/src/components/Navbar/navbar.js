@@ -1,15 +1,16 @@
 import React from "react";
 // import { FaBars } from "react-icons/fa";
 // import { links } from "./data";
-import logo from "../../assets/logo.png"
+import { ReactComponent as LogoSvg } from "../../assets/logo.svg";
+import "../../App.css";
 
 const Navbar = () => {
-//   const [showLinks, setShowLinks] = useState(false);
-//   const linksContainerRef = useRef(null);
-//   const linksRef = useRef(null);
-//   const toggleLinks = () => {
-//     setShowLinks(!showLinks);
-//   };
+  //   const [showLinks, setShowLinks] = useState(false);
+  //   const linksContainerRef = useRef(null);
+  //   const linksRef = useRef(null);
+  //   const toggleLinks = () => {
+  //     setShowLinks(!showLinks);
+  //   };
 
   //   useEffect(() => {
   //     const linksHeight = linksRef.current.getBoundingClientRect().height;
@@ -22,12 +23,8 @@ const Navbar = () => {
   return (
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img
-            src={logo}
-            // make this appropriate size
-          />
-        </a>
+        <LogoSvg />
+        {/* fix this so text below drop down is closer */}
 
         <a
           role="button"
@@ -48,17 +45,11 @@ const Navbar = () => {
 
           <a class="navbar-item">Amenities</a>
 
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">More</a>
+          <a class="navbar-item">Photos</a>
+          
+          <a class="navbar-item">Map</a>
 
-            <div class="navbar-dropdown">
-              <a class="navbar-item">Photos</a>
-              <a class="navbar-item">Map</a>
-              <a class="navbar-item">Contact</a>
-              <hr class="navbar-divider" />
-              <a class="navbar-item">Report an issue</a>
-            </div>
-          </div>
+          <a class="navbar-item">Contact</a>
         </div>
 
         <div class="navbar-end">
