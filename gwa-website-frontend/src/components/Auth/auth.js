@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import Button from 'react-bulma-components/lib/components/button';
+
 
 
 const Auth = (props) => {
@@ -67,7 +69,7 @@ const Auth = (props) => {
             <br/>
             {signupFields()}
             <br/>
-            <button class="button is-success is-outlined" onClick={handleSubmit} type='submit'>Login</button>
+            <Button color='success' onClick={handleSubmit} type='submit'>Login</Button>
         </form>
     )
 }

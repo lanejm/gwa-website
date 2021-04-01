@@ -2,10 +2,11 @@ import React from "react";
 // import { FaBars } from "react-icons/fa";
 // import { links } from "./data";
 import { ReactComponent as LogoSvg } from "../../assets/logo.svg";
-import "../../App.css";
-import Auth from "../Auth/auth"
+import "../../App.scss";
+import Auth from "../Auth/auth";
+import { Navbar } from "react-bulma-components";
 
-const Navbar = () => {
+const Navigate = () => {
   //   const [showLinks, setShowLinks] = useState(false);
   //   const linksContainerRef = useRef(null);
   //   const linksRef = useRef(null);
@@ -22,7 +23,7 @@ const Navbar = () => {
   //     }
   //   }, [showLinks]);
   return (
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <Navbar class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <LogoSvg />
         {/* fix this so text below drop down is closer */}
@@ -56,31 +57,31 @@ const Navbar = () => {
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="dropdown is-active">
-            <div class="dropdown-trigger">
-              <button
-                class="button"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu"
-              >
-                <span>Resident Login</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">
-                  <Auth />
-                </a>
+              <div class="dropdown-trigger">
+                <div
+                  class="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu"
+                >
+                  <span>Resident Login</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    <Auth />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default Navigate;

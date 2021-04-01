@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import "./App.css";
+import "./App.scss";
 import "./index.css";
-import NavBar from "./components/Navbar/navbar";
+import Navigate from "./components/Navbar/navbar";
 import Auth from './components/Auth/auth'
 import { Switch, BrowserRouter as Router, Route} from "react-router-dom"
 
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       {/* <Router> */}
-        <NavBar clearToken={clearToken} />
+        <Navigate clearToken={clearToken} />
         {/* {!sessionToken ? (
           <Auth updateToken={updateToken} />
         ) : (
