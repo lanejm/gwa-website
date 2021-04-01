@@ -3,6 +3,7 @@ import React from "react";
 // import { links } from "./data";
 import { ReactComponent as LogoSvg } from "../../assets/logo.svg";
 import "../../App.css";
+import Auth from "../Auth/auth"
 
 const Navbar = () => {
   //   const [showLinks, setShowLinks] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = () => {
           <a class="navbar-item">Amenities</a>
 
           <a class="navbar-item">Photos</a>
-          
+
           <a class="navbar-item">Map</a>
 
           <a class="navbar-item">Contact</a>
@@ -54,8 +55,26 @@ const Navbar = () => {
 
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary is-outlined">Resident Login</a>
+            <div class="dropdown is-active">
+            <div class="dropdown-trigger">
+              <button
+                class="button"
+                aria-haspopup="true"
+                aria-controls="dropdown-menu"
+              >
+                <span>Resident Login</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+              <div class="dropdown-content">
+                <a href="#" class="dropdown-item">
+                  <Auth />
+                </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
