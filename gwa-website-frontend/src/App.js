@@ -1,15 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import "./index.css";
 import Navigate from "./components/Navbar/navbar";
-import Auth from './components/Auth/auth'
-import { Switch, BrowserRouter as Router, Route} from "react-router-dom"
-
-
-
+import Auth from "./components/Auth/auth";
+import Location from "./pages/map";
+import * as ROUTES from "./constants/routes";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
-
   const [sessionToken, setSessionToken] = useState(undefined);
   const [userId, setUserId] = useState(undefined);
   const [reviews, setReviews] = useState([]);
@@ -31,18 +29,21 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Router> */}
+      <Router>
         <Navigate clearToken={clearToken} />
         {/* {!sessionToken ? (
           <Auth updateToken={updateToken} />
-        ) : (
-          <Switch>
-            
-          </Switch>
-        )}
-      </Router> */}
+        ) : ( */}
+        <Switch>
+          {/* <Route path={ROUTES.AMENITIES} component={Amenities} /> */}
+          {/* <Route path={ROUTES.PHOTOS} component={Photos} /> */}
+          <Route path={ROUTES.MAP} component={Location} />
+          {/* <Route path={ROUTES.CONTACT} component={Contact} /> */}
+        </Switch>
+        {/* )} */}
+      </Router>
     </div>
-  )
+  );
 }
 
 export default App;

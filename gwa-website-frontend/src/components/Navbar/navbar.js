@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 // import { FaBars } from "react-icons/fa";
 // import { links } from "./data";
 import { ReactComponent as LogoSvg } from "../../assets/logo.svg";
@@ -49,7 +50,8 @@ const Navigate = () => {
 
           <a class="navbar-item">Photos</a>
 
-          <a class="navbar-item">Map</a>
+          <a href='/map' class="navbar-item">Map</a>
+          
 
           <a class="navbar-item">Contact</a>
         </div>
