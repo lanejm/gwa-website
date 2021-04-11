@@ -44,16 +44,16 @@ const Navigate = () => {
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">Home</a>
+          <a href='/home' class="navbar-item">Home</a>
 
-          <a class="navbar-item">Amenities</a>
+          <a href='/amenities' class="navbar-item">Amenities</a>
 
-          <a class="navbar-item">Photos</a>
+          <a href='/photos' class="navbar-item">Photos</a>
 
           <a href='/map' class="navbar-item">Map</a>
           
 
-          <a class="navbar-item">Contact</a>
+          <a href='/contact' class="navbar-item">Contact</a>
         </div>
 
         <div class="navbar-end">
@@ -66,18 +66,18 @@ const Navigate = () => {
                   aria-controls="dropdown-menu"
                 >
                   <span>Resident Login</span>
-                  <span class="icon is-small">
+                  {/* <span class="icon is-small">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
+                  </span> */}
                 </div>
               </div>
-              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+              {/* <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
                   <a href="#" class="dropdown-item">
-                    <Auth />
+                    <Auth />  this dropdown needs state to toggle 
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
