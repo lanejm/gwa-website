@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.scss";
-import { useForm, ValidationError } from "@formspree/react";
-import { getByDisplayValue } from "@testing-library/react";
+// import { useForm, ValidationError } from "@formspree/react";
+// import { getByDisplayValue } from "@testing-library/react";
 
 function ContactForm() {
   return (

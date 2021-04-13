@@ -3,6 +3,7 @@ import "./App.scss";
 import "./index.css";
 import Navigate from "./components/Navbar/navbar";
 import Auth from "./components/Auth/auth";
+import Amenities from "./pages/amenities";
 import Location from "./pages/map";
 import Contact from "./pages/contact";
 import * as ROUTES from "./constants/routes";
@@ -36,7 +37,7 @@ function App() {
           <Auth updateToken={updateToken} />
         ) : ( */}
         <Switch>
-          {/* <Route path={ROUTES.AMENITIES} component={Amenities} /> */}
+          <Route path={ROUTES.AMENITIES} component={Amenities} />
           {/* <Route path={ROUTES.PHOTOS} component={Photos} /> */}
           <Route path={ROUTES.MAP} component={Location} />
           <Route path={ROUTES.CONTACT} component={Contact} />
