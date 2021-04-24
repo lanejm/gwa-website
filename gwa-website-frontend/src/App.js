@@ -6,6 +6,7 @@ import Auth from "./components/Auth/auth";
 import Amenities from "./pages/amenities";
 import Location from "./pages/map";
 import Contact from "./pages/contact";
+import Photos from "./pages/photos"
 import * as ROUTES from "./constants/routes";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -38,7 +39,7 @@ function App() {
         ) : ( */}
         <Switch>
           <Route path={ROUTES.AMENITIES} component={Amenities} />
-          {/* <Route path={ROUTES.PHOTOS} component={Photos} /> */}
+          <Route path={ROUTES.PHOTOS} component={Photos} />
           <Route path={ROUTES.MAP} component={Location} />
           <Route path={ROUTES.CONTACT} component={Contact} />
         </Switch>

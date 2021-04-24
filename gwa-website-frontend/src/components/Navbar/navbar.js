@@ -56,7 +56,7 @@ const Navigate = () => {
           <a href='/contact' class="navbar-item">Contact</a>
         </div>
 
-        <div class="navbar-end">
+        {/* <div class="navbar-end">
           <div class="navbar-item">
             <div class="dropdown is-active">
               <div class="dropdown-trigger">
@@ -64,13 +64,13 @@ const Navigate = () => {
                   class="button"
                   aria-haspopup="true"
                   aria-controls="dropdown-menu"
-                >
-                  <span>Resident Login</span>
+                > */}
+                  {/* <span>Resident Login</span> */}
                   {/* <span class="icon is-small">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </span> */}
-                </div>
-              </div>
+                {/* </div> */}
+              {/* </div> */}
               {/* <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
                   <a href="#" class="dropdown-item">
@@ -78,9 +78,9 @@ const Navigate = () => {
                   </a>
                 </div>
               </div> */}
-            </div>
-          </div>
-        </div>
+            {/* </div> */}
+          {/* </div> */}
+        {/* </div> */}
       </div>
     </Navbar>
   );
