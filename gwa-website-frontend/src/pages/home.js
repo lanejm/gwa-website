@@ -1,12 +1,12 @@
 import React from "react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+//swiper styles
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-
+//photos
 import exterior1 from "../assets/exterior/frontBuilding.JPG";
 import exterior2 from "../assets/exterior/frontBuilding2.JPG";
 import exterior3 from "../assets/exterior/frontBuilding3.JPG";
