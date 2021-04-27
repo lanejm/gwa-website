@@ -47,7 +47,6 @@ function ContactForm() {
               id="email-subject"
               value="Contact Form Submission"
               />
-              <input type="text" name="_gotcha" class="honeypot" />
               <div class="control">
                 <button
                   type="submit"
