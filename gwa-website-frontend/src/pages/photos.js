@@ -33,13 +33,45 @@ import twoBedroom4 from '../assets/twoBedroom/DSCN3764.JPG';
 import twoBedroom5 from '../assets/twoBedroom/DSCN3766.JPG';
 import twoBedroom6 from '../assets/twoBedroom/DSCN3768.JPG';
 import twoBedroom7 from '../assets/twoBedroom/DSCN3770.JPG';
-import twoBedroom8 from '../assets/twoBedroom/DSCN3772.JPG'
+import twoBedroom8 from '../assets/twoBedroom/DSCN3772.JPG';
+//property amenities
+import property1 from '../assets/propertyAmenities/laundry.JPG';
+import property2 from '../assets/propertyAmenities/mailboxes.JPG';
+import property3 from '../assets/propertyAmenities/keypadLock.JPG';
+import property4 from '../assets/propertyAmenities/garage.JPG';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Photos = () => {
   return (
     <>
+     <section class="hero is-info">
+        <div class="hero-body">
+          <h1 class="title has-text-left">Property Amenities</h1>
+        </div>
+      </section>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        autoplay
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide>
+          <img src={property1} alt="laundry" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={property2} alt="mailboxes" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={property3} alt="keypad lock" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={property4} alt="garage" />
+        </SwiperSlide>
+      </Swiper>
       <section class="hero is-info">
         <div class="hero-body">
           <h1 class="title has-text-left">Studio Apartment</h1>

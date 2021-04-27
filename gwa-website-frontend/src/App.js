@@ -3,6 +3,7 @@ import "./App.scss";
 import "./index.css";
 import Navigate from "./components/Navbar/navbar";
 import Auth from "./components/Auth/auth";
+import Home from "./pages/home";
 import Amenities from "./pages/amenities";
 import Location from "./pages/map";
 import Contact from "./pages/contact";
@@ -42,6 +43,7 @@ function App() {
           <Route path={ROUTES.PHOTOS} component={Photos} />
           <Route path={ROUTES.MAP} component={Location} />
           <Route path={ROUTES.CONTACT} component={Contact} />
+          <Home />
         </Switch>
         {/* )} */}
       </Router>
