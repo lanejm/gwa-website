@@ -43,7 +43,7 @@ function App() {
           <Route path={ROUTES.PHOTOS} component={Photos} />
           <Route path={ROUTES.MAP} component={Location} />
           <Route path={ROUTES.CONTACT} component={Contact} />
-          <Home />
+          <Home/>
         </Switch>
         {/* )} */}
       </Router>
