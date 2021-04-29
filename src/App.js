@@ -5,7 +5,7 @@ import Navigate from "./components/Navbar/navbar";
 import Auth from "./components/Auth/auth";
 import Home from "./pages/home";
 import Amenities from "./pages/amenities";
-import MapContainer from "./pages/map";
+import Location from "./pages/map";
 import Contact from "./pages/contact";
 import Photos from "./pages/photos"
 import * as ROUTES from "./constants/routes";
@@ -43,7 +43,7 @@ function App() {
         <Switch>
           <Route path={ROUTES.AMENITIES} component={Amenities} />
           <Route path={ROUTES.PHOTOS} component={Photos} />
-          <Route path={ROUTES.MAP} component={MapContainer} />
+          <Route path={ROUTES.MAP} component={Location} />
           <Route path={ROUTES.CONTACT} component={Contact} />
           <Home/>
         </Switch>
