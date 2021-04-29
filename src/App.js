@@ -10,6 +10,8 @@ import Contact from "./pages/contact";
 import Photos from "./pages/photos"
 import * as ROUTES from "./constants/routes";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+require ('dotenv').config();
+
 
 function App() {
   const [sessionToken, setSessionToken] = useState(undefined);
