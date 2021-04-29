@@ -1,36 +1,34 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
-
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 
 const mapStyles = {
   width: "100%",
   height: "100%",
 };
 
-export class Location extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      stores: [{ lat: 40.0, lng: -86.0 }],
-    };
-  }
-
-  displayMarker = () => {
-    return this.state.stores.map((store, index) => {
-      return (
-        <Marker
-          key={index}
-          id={index}
-          position={{
-            lat: 39.87041873958882,
-            lng: -86.12878794390897
-          }}
-          onClick={() => console.log("You clicked me!")}
-        />
-      );
-    });
+export class MapContainer extends Component {
+  state = {
+    showingInfoWindow: false, // Hides or shows the InfoWindow
+    activeMarker: {}, // Shows the active marker upon click
+    selectedPlace: {}, // Shows the InfoWindow to the selected place upon a marker
   };
+
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true,
+    });
+
+  onClose = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null,
+      });
+    }
+  };
+
   render() {
     return (
       <Map
@@ -39,13 +37,24 @@ export class Location extends Component {
         style={mapStyles}
         initialCenter={{ lat: 39.87041873958882, lng: -86.12878794390897 }}
       >
-        {this.displayMarker()}
+        <Marker
+          onClick={this.onMarkerClick}
+          name={"Glendale Woods Apartments"}
+        />
+        <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
+          onClose={this.onClose}
+        >
+          <div>
+            <h4>{this.state.selectedPlace.name}</h4>
+          </div>
+        </InfoWindow>
       </Map>
     );
   }
 }
 
 export default GoogleApiWrapper({
-  apiKey: (`${process.env.REACT_APP_GOOGLE_API_KEY}`)
-
-})(Location);
+  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+})(MapContainer);
