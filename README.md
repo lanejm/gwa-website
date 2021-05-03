@@ -1,6 +1,6 @@
 # Glendale Woods Apartments
 
-This website was developed for an apartment complex in Indianapolis, IN.  This project was built with [Create React App] (https://github.com/facebook/create-react-app).
+This website was developed for an apartment complex in Indianapolis, IN.  This project was built with [Create React App](https://github.com/facebook/create-react-app).
 
 Working version of this [website](https://glendalewoods.netlify.app/home).
 
