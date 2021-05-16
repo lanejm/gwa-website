@@ -1,6 +1,5 @@
 import React, { Component} from "react";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
 require("dotenv").config();
 
 const apiKey = process.env.REACT_APP_GOOGLE

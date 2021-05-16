@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { ReactComponent as LogoSvg } from "../../assets/logo.svg";
 import "../../App.scss";
-import Auth from "../Auth/auth";
+// import Auth from "../Auth/auth"; Auth needed to set up user login. 
 
 
 
@@ -38,6 +37,7 @@ const Navigate = () => {
       <div class="navbar-brand">
         <LogoSvg />
         <a
+          href="/home"
           role="button"
           class="navbar-burger"
           aria-label="menu"
