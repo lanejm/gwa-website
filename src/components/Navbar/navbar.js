@@ -37,7 +37,6 @@ const Navigate = () => {
       <div class="navbar-brand">
         <LogoSvg />
         <a
-          href="/home"
           role="button"
           class="navbar-burger"
           aria-label="menu"
