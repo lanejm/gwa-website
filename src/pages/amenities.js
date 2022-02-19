@@ -129,7 +129,7 @@ const Amenities = () => {
               <FontAwesomeIcon icon={faTv} size="3x" />
             </div>
             <div class="card-content">
-              <div class="content">Basic Spectrum Cable Included</div>
+              <div class="content">Spectrum Cable and Internet Included</div>
             </div>
           </div>
           <br />
